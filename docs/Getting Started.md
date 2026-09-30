@@ -4,7 +4,7 @@ slug: /getting-started
 sidebar_label: Get started
 ---
 
-# Get started- wasiq trial
+# Get started
 
 This section explains the following:
 
