@@ -1,0 +1,502 @@
+/**
+ * Zprox.Chat docs theme.
+ * Colours and type are sampled from the Zprox.Chat product UI so the docs
+ * look like part of the app: Plus Jakarta Sans, brand red #E22635, a grey
+ * page (#F6F7F9) with white bordered cards (#DFE2E7).
+ */
+
+/* ---------- Tokens: light (default) ---------- */
+:root {
+  /* Brand red and Infima shades */
+  --ifm-color-primary: #e22635;
+  --ifm-color-primary-dark: #d21c2a;
+  --ifm-color-primary-darker: #c61a28;
+  --ifm-color-primary-darkest: #a31621;
+  --ifm-color-primary-light: #e53d4b;
+  --ifm-color-primary-lighter: #e74956;
+  --ifm-color-primary-lightest: #eb6c76;
+
+  /* Product palette */
+  --z-heading: #17181b;
+  --z-body: #50545b;
+  --z-muted: #747983;
+  --z-page: #f6f7f9;
+  --z-surface: #ffffff;
+  --z-surface-muted: #f9fafb;
+  --z-border: #dfe2e7;
+  --z-border-soft: #eceef1;
+  --z-tint: #fde8ea;
+  --z-code-bg: #f1f2f5;
+  --z-shadow: 0 1px 2px rgba(23, 24, 27, 0.04), 0 1px 3px rgba(23, 24, 27, 0.06);
+  --z-radius: 16px;
+  --z-radius-sm: 10px;
+
+  /* Type */
+  --ifm-font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.7;
+  --ifm-heading-font-weight: 700;
+  --ifm-code-font-size: 88%;
+
+  /* Infima mapping */
+  --ifm-background-color: var(--z-page);
+  --ifm-background-surface-color: var(--z-surface);
+  --ifm-font-color-base: var(--z-body);
+  --ifm-heading-color: var(--z-heading);
+  --ifm-color-content: var(--z-body);
+  --ifm-color-content-secondary: var(--z-muted);
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-color-primary-dark);
+  --ifm-toc-border-color: var(--z-border);
+  --ifm-hr-border-color: var(--z-border);
+  --ifm-table-border-color: var(--z-border);
+  --ifm-table-stripe-background: transparent;
+  --ifm-table-head-background: var(--z-surface-muted);
+  --ifm-code-background: var(--z-code-bg);
+  --ifm-code-border-radius: 6px;
+  --ifm-global-radius: var(--z-radius-sm);
+  --ifm-navbar-height: 4rem;
+  --ifm-navbar-background-color: var(--z-surface);
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-link-color: var(--z-body);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-menu-color: var(--z-body);
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  --ifm-menu-color-background-active: var(--z-tint);
+  --ifm-menu-color-background-hover: var(--z-page);
+  --ifm-footer-background-color: var(--z-surface);
+  --ifm-footer-link-color: var(--z-body);
+  --ifm-footer-link-hover-color: var(--ifm-color-primary);
+  --ifm-footer-title-color: var(--z-heading);
+  --docusaurus-highlighted-code-line-bg: rgba(226, 38, 53, 0.08);
+}
+
+/* ---------- Tokens: dark ---------- */
+[data-theme='dark'] {
+  --ifm-color-primary: #ef4452;
+  --ifm-color-primary-dark: #ec2a3a;
+  --ifm-color-primary-darker: #e71d2e;
+  --ifm-color-primary-darkest: #c41624;
+  --ifm-color-primary-light: #f25e6a;
+  --ifm-color-primary-lighter: #f36b76;
+  --ifm-color-primary-lightest: #f6929a;
+
+  --z-heading: #f3f4f6;
+  --z-body: #c3c7ce;
+  --z-muted: #8e939c;
+  --z-page: #0f1114;
+  --z-surface: #17191d;
+  --z-surface-muted: #1d2025;
+  --z-border: #2a2e35;
+  --z-border-soft: #23262c;
+  --z-tint: rgba(239, 68, 82, 0.14);
+  --z-code-bg: #22252b;
+  --z-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(239, 68, 82, 0.15);
+}
+
+/* ---------- Base ---------- */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--z-tint);
+  color: var(--z-heading);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  border-bottom: 1px solid var(--z-border);
+  padding-inline: 1.25rem;
+}
+
+.navbar__logo {
+  height: 1.9rem;
+  margin-right: 1.5rem;
+}
+
+.navbar__logo img {
+  height: 100%;
+  width: auto;
+}
+
+.navbar__item.navbar__link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  margin: 0 0.15rem;
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+  background: var(--z-tint);
+}
+
+/* ---------- Sidebar ---------- */
+.theme-doc-sidebar-container {
+  background: var(--z-surface);
+  border-right-color: var(--z-border) !important;
+}
+
+.theme-doc-sidebar-menu {
+  padding-top: 0.5rem;
+}
+
+/* Section label above the menu, like the product's ENGAGE / AUTOMATE labels */
+.theme-doc-sidebar-menu::before {
+  content: 'Documentation';
+  display: block;
+  padding: 0.25rem 0.75rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--z-muted);
+}
+
+.menu {
+  padding: 0.75rem !important;
+}
+
+.menu__link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu__list-item:not(:first-child) {
+  margin-top: 0.15rem;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 var(--ifm-color-primary);
+}
+
+/* ---------- Content card ---------- */
+.theme-doc-markdown {
+  background: var(--z-surface);
+  border: 1px solid var(--z-border);
+  border-radius: var(--z-radius);
+  box-shadow: var(--z-shadow);
+  padding: 2.5rem 2.75rem;
+}
+
+.theme-doc-breadcrumbs {
+  margin-bottom: 1rem;
+}
+
+.breadcrumbs__link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--z-muted);
+  border-radius: 8px;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: var(--z-tint);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* ---------- Headings ---------- */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  color: var(--z-heading);
+  letter-spacing: -0.02em;
+}
+
+.markdown h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.25rem;
+}
+
+.markdown h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+}
+
+.markdown h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.markdown > hr {
+  border: 0;
+  border-top: 1px solid var(--z-border);
+  margin: 3rem 0;
+}
+
+/* Each page ends with a chapter separator; the card edge already closes it */
+.markdown > hr:last-child {
+  display: none;
+}
+
+/* ---------- Body text ---------- */
+.markdown strong {
+  color: var(--z-heading);
+  font-weight: 700;
+}
+
+.markdown a:not(.hash-link) {
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease;
+}
+
+.markdown a:not(.hash-link):hover {
+  background-size: 100% 1px;
+}
+
+/* Numbered steps get the brand colour, like the product's accents */
+.markdown ol > li::marker {
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+.markdown ul > li::marker {
+  color: var(--z-muted);
+}
+
+.markdown li + li {
+  margin-top: 0.35rem;
+}
+
+/* ---------- Inline code and code blocks ---------- */
+.markdown code:not(pre code) {
+  background: var(--z-code-bg);
+  border: 1px solid var(--z-border-soft);
+  color: var(--z-heading);
+  padding: 0.1rem 0.35rem;
+}
+
+.markdown pre,
+.theme-code-block {
+  border-radius: var(--z-radius-sm);
+}
+
+.theme-code-block {
+  border: 1px solid var(--z-border);
+  box-shadow: none;
+}
+
+/* ---------- Tables (product-style list headers) ---------- */
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--z-border);
+  border-radius: 12px;
+}
+
+.markdown table tr {
+  border: 0;
+  background: transparent;
+}
+
+.markdown table th,
+.markdown table td {
+  border: 0;
+  border-bottom: 1px solid var(--z-border);
+  padding: 0.7rem 1rem;
+  vertical-align: top;
+}
+
+.markdown table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.markdown table thead th {
+  background: var(--z-surface-muted);
+  color: var(--z-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.markdown table tbody tr:hover td {
+  background: var(--z-surface-muted);
+}
+
+/* ---------- Admonitions ---------- */
+.theme-admonition {
+  border-radius: 12px;
+  border-left-width: 4px;
+}
+
+/* ---------- Figures: an image followed on the next line by its caption (***Figure N.** Caption*) ---------- */
+.markdown p:has(> img + em) {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.markdown p:has(> img + em) > img {
+  display: block;
+  margin: 0 auto 0.6rem;
+  border: 1px solid var(--z-border);
+  border-radius: 12px;
+  box-shadow: var(--z-shadow);
+  background: var(--z-surface);
+}
+
+.markdown p:has(> img + em) > em {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--z-muted);
+}
+
+.markdown p:has(> img + em) > em strong {
+  color: var(--z-body);
+}
+
+/* ---------- Table of contents ---------- */
+.theme-doc-toc-desktop::before {
+  content: 'On this page';
+  display: block;
+  margin: 0 0 0.5rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--z-muted);
+}
+
+.table-of-contents {
+  border-left: 1px solid var(--z-border);
+  font-size: 0.85rem;
+}
+
+.table-of-contents__link {
+  color: var(--z-muted);
+  font-weight: 500;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+}
+
+.table-of-contents__link--active {
+  font-weight: 600;
+}
+
+/* Mobile "On this page" dropdown: a plain card, not the active tint */
+.theme-doc-toc-mobile {
+  background: var(--z-surface);
+  border: 1px solid var(--z-border);
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.theme-doc-toc-mobile button {
+  color: var(--z-heading);
+}
+
+/* ---------- Previous / next ---------- */
+.pagination-nav__link {
+  background: var(--z-surface);
+  border: 1px solid var(--z-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--z-shadow);
+}
+
+.pagination-nav__sublabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--z-muted);
+}
+
+.pagination-nav__label {
+  color: var(--z-heading);
+  font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid var(--z-border);
+  padding-block: 3rem 2rem;
+}
+
+.footer__title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--z-muted);
+}
+
+.footer__link-item {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.footer__bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--z-border);
+}
+
+.footer__bottom a[class*='footerLogoLink'] {
+  opacity: 1;
+}
+
+.footer__logo {
+  max-height: 2rem;
+  width: auto;
+  margin-bottom: 0.75rem;
+}
+
+.footer__copyright {
+  font-size: 0.85rem;
+  color: var(--z-muted);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 996px) {
+  .theme-doc-markdown {
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .markdown h1 {
+    font-size: 1.85rem;
+  }
+
+  .navbar__logo {
+    height: 1.6rem;
+    margin-right: 0.5rem;
+  }
+}
