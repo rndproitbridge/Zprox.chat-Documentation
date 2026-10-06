@@ -20,7 +20,7 @@ This section explains the following:
 1. Go to **Settings** > **Instagram Accounts**.
 2. Select **Connect Instagram**. An Instagram authorisation window opens.
 
-   ![Figure 11. Instagram sign-in window](/static/img/Assets/Figure%2011%20-%20Instagram%20Accounts.png)
+   ![Figure 11. Instagram sign-in window](/img/Assets/Figure%2011%20-%20Instagram%20Accounts.png)
    ***Figure 11.** Instagram sign-in window*
 
 3. Sign in with the Instagram Business account you want to connect.
