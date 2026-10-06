@@ -500,3 +500,160 @@ html {
     margin-right: 0.5rem;
   }
 }
+
+
+/* ---------- Home page (docs/Home.md) ---------- */
+/* The home doc drops the white content card and breadcrumbs so the hero sits on the page */
+.theme-doc-markdown:has(.zpHome) {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+article:has(.zpHome) .theme-doc-breadcrumbs {
+  display: none;
+}
+
+.zpHome {
+  position: relative;
+  isolation: isolate;
+  padding: 3rem 1rem 1rem;
+}
+
+/* Faint grid fading out from the top, with a soft tint wash, like the reference */
+.zpHome::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(var(--z-border-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--z-border-soft) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 20%, transparent 75%);
+}
+
+.zpHome::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(ellipse 60% 50% at 50% 35%, var(--z-tint), transparent 70%);
+  opacity: 0.6;
+}
+
+.zpHero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.markdown .zpHeroTitle {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.25rem;
+  text-wrap: balance;
+}
+
+.zpHeroLede {
+  max-width: 46rem;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--z-body);
+  text-wrap: balance;
+}
+
+.zpGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 47rem;
+  margin: 0 auto 4rem;
+}
+
+.markdown a.zpCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 11rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: inherit;
+  background: color-mix(in srgb, var(--z-surface) 70%, transparent);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--z-border-soft);
+  border-radius: var(--z-radius);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.markdown a.zpCard:hover {
+  color: inherit;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 6px 20px rgba(23, 24, 27, 0.06);
+  transform: translateY(-2px);
+}
+
+.zpIcon {
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+.markdown .zpCard h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+}
+
+.zpCard p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--z-body);
+}
+
+.zpQuickLinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.markdown .zpQuickLinks a {
+  color: var(--z-body);
+  font-weight: 500;
+}
+
+.markdown .zpQuickLinks a:hover {
+  color: var(--ifm-color-primary);
+}
+
+@media (max-width: 640px) {
+  .zpHome {
+    padding-top: 1.5rem;
+  }
+
+  .zpGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .markdown a.zpCard {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .markdown a.zpCard {
+    transition: none;
+  }
+
+  .markdown a.zpCard:hover {
+    transform: none;
+  }
+}

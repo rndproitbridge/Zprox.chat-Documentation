@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 slug: /getting-started
-sidebar_label: Get started
+sidebar_label: Getting Started
 ---
 
-# Get started
+# Getting Started 
 
 This section explains the following:
 
@@ -124,20 +124,20 @@ The sidebar on the left is how you move around Zprox.Chat. Items are grouped by 
 | Group | Item | What it does |
 |---|---|---|
 | — | **Home** | The dashboard. See [The Home dashboard](#the-home-dashboard). |
-| Engage | **Chats** | The shared team inbox. See [Chats](./Engage.md). |
-| Engage | **Lead Studio** | Your contact database. See [Lead Studio](./Engage.md#lead-studio). |
-| Engage | **Broadcast** | Bulk template and text sends. See [Broadcasts](./Engage.md#broadcasts). |
-| Automate | **Automations** | The flow builder. See [Automations](./Automate.md). |
-| Automate | **AI Agents** | LLM auto-reply agents. See [AI agents](./Automate.md#ai-agents). |
-| Automate | **Templates** | WhatsApp message templates. See [Message templates](./Engage.md#message-templates). |
-| Manage | **Media** | Shared media library. See [Media library](./Manage.md#media-library). |
-| Manage | **Forms** | Lead-capture forms. See [Forms](./Manage.md). |
+| Engage | **Chats** | The shared team inbox. See [Chats](./Chats.md). |
+| Engage | **Lead Studio** | Your contact database. See [Lead Studio](./lead%20Studio.md). |
+| Engage | **Broadcast** | Bulk template and text sends. See [Broadcasts](./Broadcast.md). |
+| Automate | **Automations** | The flow builder. See [Automations](./Automations.md). |
+| Automate | **AI Agents** | LLM auto-reply agents. See [AI agents](./AI%20Agents.md). |
+| Automate | **Templates** | WhatsApp message templates. See [Message templates](./Templates.md). |
+| Manage | **Media** | Shared media library. See [Media library](./Media.md). |
+| Manage | **Forms** | Lead-capture forms. See [Forms](./Forms.md). |
 | Manage | **Plans & Billing** | Plans, payment, add-ons. **Admin only.** See [Plans, billing, and usage](./Billings%20%26%20Usage.md). |
 | Manage | **Usage & Costs** | Estimated spend. **Admin only.** See [To review usage and costs](./Billings%20%26%20Usage.md#to-review-usage-and-costs). |
-| Channels | **WhatsApp** | WhatsApp analytics. See [The WhatsApp panel](./Channels.md#the-whatsapp-panel). |
-| Channels | **Instagram** | Instagram tools. See [The Instagram panel](./Channels.md#the-instagram-panel). |
-| Apps | **Shopify** | Appears only when a Shopify store is connected. See [Shopify](./Channels.md#shopify). |
-| Apps | **WooCommerce** | Appears only when a WooCommerce store is connected. See [WooCommerce](./Channels.md#woocommerce). |
+| Channels | **WhatsApp** | WhatsApp analytics. See [The WhatsApp panel](./Instagram.md#the-whatsapp-panel). |
+| Channels | **Instagram** | Instagram tools. See [The Instagram panel](./Instagram.md#the-instagram-panel). |
+| Apps | **Shopify** | Appears only when a Shopify store is connected. See [Shopify](./Shopify.md). |
+| Apps | **WooCommerce** | Appears only when a WooCommerce store is connected. See [WooCommerce](./WooCommerce.md). |
 
 At the top of the sidebar you see your workspace name and your current plan. At the bottom you see your name and role.
 
@@ -234,7 +234,7 @@ WhatsApp lets you send a normal message only within 24 hours of the customer's l
    - **Template** — select an approved template from the list.
 5. Select **Save**. The **Auto-remind** toggle becomes available in every chat.
 
-**To use the reminder on a conversation:** Open the chat and turn on **Auto-remind**, or turn it on for many leads at once from Lead Studio. See [To run bulk actions](./Engage.md#to-run-bulk-actions).
+**To use the reminder on a conversation:** Open the chat and turn on **Auto-remind**, or turn it on for many leads at once from Lead Studio. See [To run bulk actions](./lead%20Studio.md#to-run-bulk-actions).
 
 ## To create categories and groups
 

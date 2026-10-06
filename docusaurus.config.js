@@ -110,16 +110,18 @@ const config = {
             items: [
               {label: 'Overview', to: '/'},
               {label: 'Get started', to: '/getting-started'},
-              {label: 'Channels', to: '/channels'},
+              {label: 'WhatsApp', to: '/WhatsApp'},
+              {label: 'Instagram', to: '/Instagram'},
               {label: 'Billing & usage', to: '/billing-and-usage'},
             ],
           },
           {
             title: 'Using Zprox.Chat',
             items: [
-              {label: 'Engage', to: '/engage'},
-              {label: 'Automate', to: '/automate'},
-              {label: 'Manage', to: '/manage'},
+              {label: 'Chats', to: '/Chats'},
+              {label: 'Lead Studio', to: '/lead-studio'},
+              {label: 'Automation', to: '/Automation'},
+              {label: 'AI Agents', to: '/ai-agents'},
             ],
           },
           {

@@ -20,9 +20,9 @@ This guide is for new Zprox.Chat users:
 |---|---|
 | A web browser | Zprox.Chat runs in the browser. Use the current version of Chrome, Edge, Firefox, or Safari. |
 | A work email address | You use it to sign in, and to receive verification and password-reset codes. |
-| A Meta Business account with a WhatsApp Business Account (WABA) | Required to send and receive WhatsApp messages. See [Connect your WhatsApp Business account](./Channels.md). |
-| An Instagram **Business** account | Optional. Required only for Instagram DMs and comments. See [Connect your Instagram account](./Channels.md#connect-your-instagram-account). |
-| An AI provider API key | Optional. Required only for AI agents. See [To connect an AI model provider](./Channels.md#to-connect-an-ai-model-provider). |
+| A Meta Business account with a WhatsApp Business Account (WABA) | Required to send and receive WhatsApp messages. See [Connect your WhatsApp Business account](./WhatsApp.md). |
+| An Instagram **Business** account | Optional. Required only for Instagram DMs and comments. See [Connect your Instagram account](./Instagram.md). |
+| An AI provider API key | Optional. Required only for AI agents. See [To connect an AI model provider](./Integrations.md#to-connect-an-ai-model-provider). |
 
 ## Support and feedback
 
@@ -34,7 +34,7 @@ To report a problem or suggest an improvement, contact PROITBRIDGE support.
 
 ---
 
-# Features of Zprox.Chat
+## Features of Zprox.Chat
 
 The key features of Zprox.Chat are:
 

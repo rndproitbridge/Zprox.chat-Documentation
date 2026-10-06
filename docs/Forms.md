@@ -1,7 +1,7 @@
 ---
-sidebar_position: 5
-slug: /manage
-sidebar_label: Manage
+sidebar_position: 11
+slug: /Forms
+sidebar_label: Forms
 ---
 
 # Forms
@@ -82,7 +82,7 @@ Under **Form type**, select one:
 | **Public link** | Zprox.Chat publishes the form at a public web address. Share the link anywhere. |
 | **WhatsApp** | The form is sent inside a WhatsApp conversation. Select the WhatsApp account that sends it, or choose the option that stores responses only. |
 
-For the WhatsApp type, the **Send inside WhatsApp** panel shows the template the form uses and its approval status. The statuses are the same as in [Understand template statuses](./Engage.md#understand-template-statuses).
+For the WhatsApp type, the **Send inside WhatsApp** panel shows the template the form uses and its approval status. The statuses are the same as in [Understand template statuses](./Templates.md#understand-template-statuses).
 
 ## To publish and share a form
 
@@ -107,54 +107,5 @@ To stop accepting responses, set the status to **Closed**.
 2. Select the WhatsApp account the contacts should belong to.
 3. Optionally select an existing group to apply, or create a new one by typing a name and choosing a category.
 4. Select **Export**. The responses become contacts in Lead Studio, matched on phone number so existing contacts are updated rather than duplicated.
-
----
-
-<a id="media-library"></a>
-
-# Media library
-
-The media library holds images, videos, audio, and documents that chats, AI agents, and templates can use. Media is stored per WhatsApp account.
-
-This section explains the following:
-
-- [To upload media](#to-upload-media)
-- [Understand sync status](#understand-sync-status)
-- [To use or delete media](#to-use-or-delete-media)
-
-## To upload media
-
-1. Select **Media** in the sidebar.
-2. At the top, select the connected account the media belongs to.
-3. Select **Upload**. The **Upload Media** dialog appears.
-
-   ![Figure 24. Upload media](/img/Assets/Figure%2024%20-%20Upload%20media.png)
-   ***Figure 24.** Upload media*
-
-4. Choose the file, or drag it into the dialog.
-5. In the name box, type a name you'll recognise, for example `Diwali greeting v2`.
-6. In the notes box, type internal notes. This is optional.
-7. Select **Upload**. The item appears in the library.
-
-## Understand sync status
-
-Zprox.Chat uploads media to Meta so that WhatsApp can send it. Each item shows its sync state.
-
-| Status | Meaning |
-|---|---|
-| **Not synced** | Stored in Zprox.Chat, not yet sent to Meta. |
-| **Syncing…** | Upload to Meta in progress. |
-| **Synced** | Ready to send on WhatsApp. |
-| **Failed** | The upload to Meta failed. Try again, or check the account's token. |
-| **Expired** | Meta's copy has expired. Zprox.Chat re-uploads it the next time you use it. |
-
-## To use or delete media
-
-- **In a chat:** Select the library icon in the composer and pick the item. See [To send a file, image, or voice message](./Engage.md#to-send-a-file-image-or-voice-message).
-- **In an AI agent:** Add the item to a media group. See [To give the agent media](./Automate.md#to-give-the-agent-media).
-- **To copy the media ID:** Select the copy icon on the item. Use the ID in automations and API calls.
-- **To delete:** Select the bin icon on the item and confirm.
-
-**Important:** Deleting media that a template or agent still refers to causes those sends to fail.
 
 ---
