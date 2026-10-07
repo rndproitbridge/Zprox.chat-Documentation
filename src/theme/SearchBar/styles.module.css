@@ -1,0 +1,383 @@
+/* Docs search: navbar trigger and dialog. Uses the --z-* tokens from custom.css. */
+
+/* ---------- Navbar trigger ---------- */
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 15rem;
+  height: 2.4rem;
+  margin-left: 0.5rem;
+  padding: 0 0.5rem 0 0.75rem;
+  border: 1px solid var(--z-border);
+  border-radius: 10px;
+  background: var(--z-page);
+  color: var(--z-muted);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.trigger:hover {
+  border-color: var(--ifm-color-primary);
+  background: var(--z-surface);
+}
+
+.triggerIcon {
+  flex-shrink: 0;
+}
+
+.triggerText {
+  flex: 1;
+  text-align: left;
+}
+
+.triggerKey,
+.closeKey,
+.footer kbd {
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--z-border);
+  border-radius: 6px;
+  background: var(--z-surface);
+  box-shadow: none;
+  color: var(--z-muted);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---------- Overlay and dialog ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10vh 1rem 1rem;
+  background: rgba(23, 24, 27, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+:global([data-theme='dark']) .overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 40rem;
+  max-height: 75vh;
+  overflow: hidden;
+  border: 1px solid var(--z-border);
+  border-radius: var(--z-radius);
+  background: var(--z-surface);
+  box-shadow: 0 20px 50px rgba(23, 24, 27, 0.25);
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--z-border);
+}
+
+.inputIcon {
+  flex-shrink: 0;
+  color: var(--ifm-color-primary);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 2.25rem;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--z-heading);
+  font: inherit;
+  font-size: 1.05rem;
+}
+
+.input::placeholder {
+  color: var(--z-muted);
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.close {
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.closeText {
+  display: none;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.5rem;
+}
+
+.message {
+  margin: 0.75rem 0.75rem 0.5rem;
+  color: var(--z-muted);
+  font-size: 0.92rem;
+}
+
+.message strong {
+  color: var(--z-heading);
+}
+
+.correction {
+  margin: 0.4rem 0.75rem 0.5rem;
+  color: var(--z-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- Empty state ---------- */
+.empty {
+  padding-bottom: 0.75rem;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0.75rem;
+}
+
+.example {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--z-border);
+  border-radius: 999px;
+  background: var(--z-surface-muted);
+  color: var(--z-body);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.example:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+/* ---------- Results ---------- */
+.results {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.result {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--z-radius-sm);
+  color: var(--z-body);
+  text-decoration: none !important;
+}
+
+.result:hover {
+  color: var(--z-body);
+}
+
+.resultActive {
+  background: var(--z-tint);
+}
+
+.resultPage {
+  display: block;
+  color: var(--z-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resultHeading {
+  display: block;
+  margin-top: 0.1rem;
+  color: var(--z-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.resultActive .resultHeading {
+  color: var(--ifm-color-primary);
+}
+
+.resultText {
+  display: -webkit-box;
+  margin-top: 0.2rem;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.result mark {
+  padding: 0 1px;
+  border-radius: 3px;
+  background: var(--z-tint);
+  color: var(--z-heading);
+  font-weight: 600;
+}
+
+.resultActive mark {
+  background: transparent;
+  color: var(--ifm-color-primary);
+}
+
+/* ---------- Contact panel ---------- */
+.contact {
+  margin: 0.5rem 0.25rem 0.25rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--z-border);
+  border-radius: var(--z-radius-sm);
+  background: var(--z-surface-muted);
+}
+
+.contactTitle {
+  margin: 0 0 0.25rem;
+  color: var(--z-heading);
+  font-weight: 700;
+}
+
+.contactText {
+  margin: 0 0 0.9rem;
+  font-size: 0.9rem;
+}
+
+.contactActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.contactPrimary,
+.contactSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.contactPrimary {
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.contactPrimary:hover {
+  background: var(--ifm-color-primary-dark);
+  color: #fff;
+}
+
+.contactSecondary {
+  border: 1px solid var(--z-border);
+  background: var(--z-surface);
+  color: var(--z-body);
+}
+
+.contactSecondary:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  border-top: 1px solid var(--z-border);
+  background: var(--z-surface-muted);
+  color: var(--z-muted);
+  font-size: 0.8rem;
+}
+
+.footer kbd {
+  margin-right: 0.2rem;
+}
+
+.footerLink {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ifm-color-primary);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 996px) {
+  .trigger {
+    width: auto;
+  }
+
+  .triggerKey {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .trigger {
+    width: 2.4rem;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .triggerText {
+    display: none;
+  }
+
+  .overlay {
+    padding: 0;
+  }
+
+  .dialog {
+    max-width: none;
+    max-height: none;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .closeKey,
+  .footerKeys {
+    display: none;
+  }
+
+  .closeText {
+    display: inline;
+  }
+
+  .footer {
+    justify-content: flex-end;
+  }
+}

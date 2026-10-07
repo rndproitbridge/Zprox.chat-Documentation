@@ -63,6 +63,18 @@ const config = {
     ],
   ],
 
+  // Indexes every doc for the navbar search (src/theme/SearchBar).
+  plugins: ['./plugins/docs-search'],
+
+  customFields: {
+    // Shown in the search box when a search finds nothing. Leave a field empty
+    // to hide that option. whatsapp is the full number with country code.
+    support: {
+      email: '',
+      whatsapp: '',
+    },
+  },
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
